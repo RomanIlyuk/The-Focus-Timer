@@ -1,4 +1,4 @@
-function Button({ children, isActive }) {
+function ButtonModes({ children, isActive }) {
   const baseStyles = "px-4 py-2 rounded-full transition-all duration-200";
 
   const activeStyles = "bg-slate-500 text-white font-medium";
@@ -14,4 +14,4 @@ function Button({ children, isActive }) {
   );
 }
 
-export default Button;
+export default ButtonModes;

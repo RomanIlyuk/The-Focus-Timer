@@ -1,11 +1,11 @@
-import Button from "../Buttons/Button";
+import ButtonModes from "../Buttons/ButtonModes";
 
 function TimerModes() {
   return (
     <nav className="flex gap-2 bg-slate-700 p-2 rounded-full ">
-      <Button isActive={true}>Focus</Button>
-      <Button>Start break</Button>
-      <Button>Long break</Button>
+      <ButtonModes isActive={true}>Focus</ButtonModes>
+      <ButtonModes>Start break</ButtonModes>
+      <ButtonModes>Long break</ButtonModes>
     </nav>
   );
 }
