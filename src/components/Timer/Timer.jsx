@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TimerControls from "./TimerControls";
 import TimerCounter from "./TimerCounter";
 import TimerDisplay from "./TimerDisplay";
@@ -24,7 +24,18 @@ function Timer() {
   function handleReset() {
     setIsRunning(false);
     setCount(0);
+    setTime(25 * 60);
   }
+
+  useEffect(() => {
+    if (!isRunning) return;
+
+    const intervalId = setInterval(() => {
+      setTime((prevTime) => prevTime - 1);
+    }, 1000);
+
+    return () => clearInterval(intervalId);
+  }, [isRunning]);
 
   return (
     <div className="bg-slate-800 m-auto p-6 flex flex-col items-center gap-6 max-w-120 border-2 border-indigo-500 rounded-xl">

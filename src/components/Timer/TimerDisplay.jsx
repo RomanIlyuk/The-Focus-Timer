@@ -1,7 +1,6 @@
-/* eslint-disable no-unused-vars */
 import { formatTime } from "../../utils/formatTime";
 
-function TimerDisplay({ time, setTime }) {
+function TimerDisplay({ time }) {
   return (
     <div>
       <p className="text-7xl font-bold text-white tracking-tight">
