@@ -1,7 +1,12 @@
-function TimerDisplay() {
+/* eslint-disable no-unused-vars */
+import { formatTime } from "../../utils/formatTime";
+
+function TimerDisplay({ time, setTime }) {
   return (
     <div>
-      <p className="text-7xl font-bold text-white tracking-tight">25:00</p>
+      <p className="text-7xl font-bold text-white tracking-tight">
+        {formatTime(time)}
+      </p>
     </div>
   );
 }
