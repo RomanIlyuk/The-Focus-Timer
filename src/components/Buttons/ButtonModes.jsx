@@ -1,4 +1,4 @@
-function ButtonModes({ children, isActive }) {
+function ButtonModes({ children, isActive, onClick }) {
   const baseStyles = "px-4 py-2 rounded-full transition-all duration-200";
 
   const activeStyles = "bg-slate-500 text-white font-medium";
@@ -7,6 +7,7 @@ function ButtonModes({ children, isActive }) {
 
   return (
     <button
+      onClick={onClick}
       className={`${baseStyles} ${isActive ? activeStyles : inactiveStyles}`}
     >
       {children}
