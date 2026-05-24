@@ -7,10 +7,10 @@ function Home() {
   return (
     <>
       <Header />
-
-      <Timer />
-      <MusicWidget />
-
+      <div className="flex items-start justify-center p-12 gap-12">
+        <Timer />
+        <MusicWidget />
+      </div>
       <Footer />
     </>
   );

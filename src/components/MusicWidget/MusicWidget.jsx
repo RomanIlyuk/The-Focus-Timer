@@ -5,7 +5,7 @@ import MusicTip from "./MusicTip";
 
 function MusicWidget() {
   return (
-    <section className="bg-slate-800 m-auto p-6 flex flex-col items-center gap-6 max-w-120 border-2 border-indigo-500 rounded-xl">
+    <section className="bg-slate-800  w-full max-w-md p-6 flex flex-col items-center gap-6  border-2 border-indigo-500 rounded-xl">
       <MusicHeader />
       <MusicStation />
       <MusicPlayer />
@@ -15,3 +15,5 @@ function MusicWidget() {
 }
 
 export default MusicWidget;
+
+// m-auto max-w-120
