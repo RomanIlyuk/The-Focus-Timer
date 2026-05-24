@@ -16,7 +16,7 @@ const modes = {
 function Timer() {
   const [mode, setMode] = useState("focus");
 
-  const [time, setTime] = useState(25 * 60); // 25 minutes in seconds
+  const [time, setTime] = useState(0.05 * 60); // 25 minutes in seconds
   const [isRunning, setIsRunning] = useState(false);
   const [count, setCount] = useState(0);
 
@@ -27,14 +27,15 @@ function Timer() {
   }
 
   function handleClick() {
-    if (!isRunning) {
+    if (!isRunning && time >= 1) {
       setCount((c) => c + 1);
     }
     setIsRunning(!isRunning);
   }
 
   function handleReset() {
-    setTime(25 * 60);
+    if (mode === "focus") setTime(modes["focus"]);
+    if (mode === "shortBreak") setTime(modes["shortBreak"]);
     setIsRunning(false);
     setCount(0);
   }
@@ -59,7 +60,10 @@ function Timer() {
   useEffect(() => {
     if (time === 0) {
       if (mode === "focus") {
-        toast.success(`Break time!`);
+        toast.success("Break time!");
+      }
+      if (mode === "shortBreak") {
+        toast.success("Focus time!");
       }
     }
   }, [time]);
