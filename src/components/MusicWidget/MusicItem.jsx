@@ -1,7 +1,12 @@
-function MusicItem({ music }) {
+/* eslint-disable no-unused-vars */
+
+function MusicItem({ music, onSelect }) {
   return (
     <li>
-      <button className="flex flex-col text-left border border-indigo-500 rounded-xl p-2.5 h-full w-36">
+      <button
+        onClick={() => onSelect(music)}
+        className="flex flex-col text-left border-2 border-indigo-500 rounded-xl p-2.5 h-full w-36 hover:bg-slate-700"
+      >
         <h3 className="text-white text-xl">{music.style}</h3>
         <p className="text-gray-300 text-md mt-2">{music.description}</p>
       </button>

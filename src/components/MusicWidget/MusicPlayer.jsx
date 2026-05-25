@@ -1,11 +1,10 @@
-function MusicPlayer() {
+function MusicPlayer({ url }) {
   return (
-    <div>
+    <div className="w-[425px] aspect-video rounded-2xl overflow-hidden shadow-lg shadow-indigo-700 border-2 border-indigo-500">
       <iframe
-        width="425"
-        height="250"
-        src="https://www.youtube.com/embed/v=CLeZyIID9Bo"
-        frameborder="0"
+        className="w-full h-full"
+        src={url}
+        frameBorder="0"
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
