@@ -28,7 +28,11 @@ function MusicStations() {
   return (
     <>
       <nav aria-label="Music stations">
-        <MusicList items={musicData} onSelect={setSelectedMusic} />
+        <MusicList
+          items={musicData}
+          onSelect={setSelectedMusic}
+          selectedMusic={selectedMusic}
+        />
       </nav>
       <MusicPlayer url={selectedMusic.url} />
     </>
