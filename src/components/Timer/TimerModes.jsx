@@ -1,8 +1,6 @@
-/* eslint-disable no-unused-vars */
-
 import ButtonModes from "../Buttons/ButtonModes";
 
-function TimerModes({ mode, setMode, onModeChange }) {
+function TimerModes({ mode, onModeChange }) {
   return (
     <nav className="flex gap-2 bg-slate-700 p-2 rounded-full ">
       <ButtonModes

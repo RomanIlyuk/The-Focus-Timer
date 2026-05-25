@@ -1,5 +1,4 @@
 /* eslint-disable no-unused-vars */
-
 import toast, { Toaster } from "react-hot-toast";
 import { useEffect, useState } from "react";
 import TimerControls from "./TimerControls";
@@ -70,11 +69,7 @@ function Timer() {
 
   return (
     <section className="bg-slate-800 w-full max-w-md p-6 flex flex-col items-center gap-6  border-2 border-indigo-500 rounded-xl">
-      <TimerModes
-        mode={mode}
-        setMode={setMode}
-        onModeChange={handleModeChange}
-      />
+      <TimerModes mode={mode} onModeChange={handleModeChange} />
 
       <TimerDisplay time={time} setTime={setTime} />
 
@@ -86,7 +81,7 @@ function Timer() {
         onReset={handleReset}
       />
 
-      <TimerCounter count={count} setCount={setCount} />
+      <TimerCounter count={count} />
     </section>
   );
 }

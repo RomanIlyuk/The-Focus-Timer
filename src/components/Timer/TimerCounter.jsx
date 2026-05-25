@@ -1,6 +1,4 @@
-/* eslint-disable no-unused-vars */
-
-function TimerCounter({ count, setCount }) {
+function TimerCounter({ count }) {
   return (
     <div>
       <p className="text-gray-300 text-lg">

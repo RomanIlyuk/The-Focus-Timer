@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-
 function MusicItem({ music, onSelect }) {
   return (
     <li>
