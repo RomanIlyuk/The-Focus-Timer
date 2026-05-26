@@ -57,14 +57,8 @@ function Timer() {
   }, [isRunning]);
 
   useEffect(() => {
-    if (time === 0) {
-      if (mode === "focus") {
-        toast.success("Break time!");
-      }
-      if (mode === "shortBreak") {
-        toast.success("Focus time!");
-      }
-    }
+    if (time === 0 && mode === "focus") toast.success("Break time!");
+    if (time === 0 && mode === "shortBreak") toast.success("Focus time!");
   }, [time, mode]);
 
   return (
