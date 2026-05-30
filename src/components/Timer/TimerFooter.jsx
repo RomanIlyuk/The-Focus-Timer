@@ -1,4 +1,4 @@
-function Footer() {
+function TimerFooter() {
   return (
     <div className="flex flex-col items-center justify-center">
       <p className="text-gray-300 text-lg">
@@ -8,4 +8,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default TimerFooter;

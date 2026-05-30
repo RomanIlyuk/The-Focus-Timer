@@ -1,14 +1,12 @@
-/* eslint-disable no-unused-vars */
 import { useState } from "react";
+import HomeMenu from "../components/Home/HomeMenu";
 
 function Home() {
-  const buttonStyles = "text-teal-200 hover:underline decoration-2";
-
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section className="flex flex-col items-center justify-start min-h-screen w-full px-4">
-      <h1 className="text-9xl pt-20 bg-linear-to-r/longer from-indigo-500 to-teal-400 bg-clip-text text-transparent text-center">
+    <section className="flex flex-col items-center justify-start min-h-screen w-full px-4 bg-slate-950">
+      <h1 className="text-9xl pt-20 bg-linear-to-r/hsl from-indigo-500 to-teal-400 bg-clip-text text-transparent text-center">
         Explore your own ideas
       </h1>
 
@@ -24,16 +22,8 @@ function Home() {
         {isOpen ? "Show less" : "Show more"}
       </button>
 
-      {isOpen && (
-        <ul className="flex flex-col items-center gap-8 mt-12 text-2xl text-white">
-          <li>
-            <button className={buttonStyles}>Focus Timer</button>
-          </li>
-          <li>
-            <button className={buttonStyles}>Pet Projects</button>
-          </li>
-        </ul>
-      )}
+      {/* V-2 */}
+      <HomeMenu isOpen={isOpen} />
     </section>
   );
 }

@@ -1,4 +1,4 @@
-function Header() {
+function TimerHeader() {
   return (
     <div className="flex flex-col items-center justify-center pt-10 pb-10">
       <h1 className="text-indigo-500 text-5xl pb-4">Focus Timer</h1>
@@ -9,4 +9,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default TimerHeader;
