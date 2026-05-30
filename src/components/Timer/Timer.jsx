@@ -15,7 +15,7 @@ const modes = {
 function Timer() {
   const [mode, setMode] = useState("focus");
 
-  const [time, setTime] = useState(25 * 60); // 25 minutes in seconds
+  const [time, setTime] = useState(modes.focus); // 25 minutes in seconds
   const [isRunning, setIsRunning] = useState(false);
   const [count, setCount] = useState(0);
 
