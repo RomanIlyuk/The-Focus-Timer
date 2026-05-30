@@ -5,7 +5,7 @@ function Home() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section className="flex flex-col items-center justify-start min-h-screen w-full px-4 bg-slate-950">
+    <section className="flex flex-col items-center justify-start w-full px-4">
       <h1 className="text-9xl pt-20 bg-linear-to-r/hsl from-indigo-500 to-teal-400 bg-clip-text text-transparent text-center">
         Explore your own ideas
       </h1>
