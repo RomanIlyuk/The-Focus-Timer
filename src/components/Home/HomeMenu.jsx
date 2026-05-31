@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 function HomeMenu({ isOpen }) {
   const buttonStyles = "text-teal-200 hover:underline decoration-2";
 
@@ -14,10 +16,14 @@ function HomeMenu({ isOpen }) {
         `}
     >
       <li>
-        <button className={buttonStyles}>Focus Timer</button>
+        <Link className={buttonStyles} to="/focus-timer">
+          Focus Timer
+        </Link>
       </li>
       <li>
-        <button className={buttonStyles}>Pet Projects</button>
+        <Link className={buttonStyles} to="/pet-projects">
+          Pet Projects
+        </Link>
       </li>
     </ul>
   );
