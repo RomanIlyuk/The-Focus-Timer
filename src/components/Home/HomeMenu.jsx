@@ -1,31 +1,34 @@
 import { Link } from "react-router";
 
 function HomeMenu({ isOpen }) {
-  const buttonStyles = "text-teal-200 hover:underline decoration-2";
+  const buttonStyles = "text-teal-200 hover:underline decoration-2 transition";
 
   return (
-    <ul
-      className={`
-          flex flex-col items-center gap-8 mt-12 text-2xl text-white
-          transition-all duration-500 ease-out
+    <div className="relative mt-12">
+      <ul
+        className={`
+          flex flex-col items-center gap-8 text-2xl text-white origin-top transition-all duration-500 ease-out
+
           ${
             isOpen
-              ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
-              : "opacity-0 -translate-y-4 scale-95 pointer-events-none"
+              ? "opacity-100 translate-y-0 scale-100 blur-0 pointer-events-auto"
+              : "opacity-0 -translate-y-4 scale-95 blur-sm pointer-events-none"
           }
         `}
-    >
-      <li>
-        <Link className={buttonStyles} to="/focus-timer">
-          Focus Timer
-        </Link>
-      </li>
-      <li>
-        <Link className={buttonStyles} to="/pet-projects">
-          Pet Projects
-        </Link>
-      </li>
-    </ul>
+      >
+        <li className="transition-all duration-300 hover:scale-105">
+          <Link className={buttonStyles} to="/focus-timer">
+            Focus Timer
+          </Link>
+        </li>
+
+        <li className="transition-all duration-300 hover:scale-105">
+          <Link className={buttonStyles} to="/pet-projects">
+            Pet Projects
+          </Link>
+        </li>
+      </ul>
+    </div>
   );
 }
 
