@@ -4,7 +4,7 @@ export const projectData = [
     title: "🍿 Use Popcorn - React Movie Search App",
     description:
       "The project spans three sections and focuses on strengthening core React concepts through a real-world movie search and watchlist experience.",
-    projectUrl: "https://github.com/RomanIlyuk/The-Wild-Oasis",
+    projectUrl: "https://github.com/RomanIlyuk/use-popcorn",
   },
   {
     id: 2,
