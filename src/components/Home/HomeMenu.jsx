@@ -18,13 +18,13 @@ function HomeMenu({ isOpen }) {
       >
         <li className="transition-all duration-300 hover:scale-105">
           <Link className={buttonStyles} to="/focus-timer">
-            Focus Timer
+            Start focus session
           </Link>
         </li>
 
         <li className="transition-all duration-300 hover:scale-105">
           <Link className={buttonStyles} to="/pet-projects">
-            Pet Projects
+            Research your projects
           </Link>
         </li>
       </ul>
