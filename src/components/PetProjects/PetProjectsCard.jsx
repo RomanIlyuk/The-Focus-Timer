@@ -6,9 +6,9 @@ function PetProjectsCard({ title, description, url }) {
       <a
         href={url}
         target="_blank"
-        className="mt-auto text-m text-indigo-500 hover:underline"
+        className="mt-auto text-m font-semibold text-indigo-500 hover:underline"
       >
-        Learn more
+        Learn more &rarr;
       </a>
     </section>
   );
