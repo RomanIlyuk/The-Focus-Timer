@@ -7,7 +7,10 @@ function PetProjects() {
   return (
     <MainLayout>
       <PetProjectsHeader />
-      <div className="flex items-start justify-center p-12 gap-12">
+      <div className="grid grid-cols-3 p-12 gap-12">
+        <PetProjectsCard />
+        <PetProjectsCard />
+        <PetProjectsCard />
         <PetProjectsCard />
         <PetProjectsCard />
         <PetProjectsCard />
