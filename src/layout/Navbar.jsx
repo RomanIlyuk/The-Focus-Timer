@@ -1,8 +1,9 @@
-/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { NavLink } from "react-router";
 
-function Navbar2() {
+const buttonStyle = "text-indigo-500 hover:text-indigo-600 hover:underline";
+
+function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => {
@@ -50,7 +51,7 @@ function Navbar2() {
           <NavLink
             to="/"
             onClick={() => setIsOpen(false)}
-            className="text-indigo-500 hover:text-indigo-600 hover:underline"
+            className={buttonStyle}
           >
             Home
           </NavLink>
@@ -58,7 +59,7 @@ function Navbar2() {
           <NavLink
             to="/focus-timer"
             onClick={() => setIsOpen(false)}
-            className="text-indigo-500 hover:text-indigo-600 hover:underline"
+            className={buttonStyle}
           >
             Focus Timer
           </NavLink>
@@ -66,7 +67,7 @@ function Navbar2() {
           <NavLink
             to="/pet-projects"
             onClick={() => setIsOpen(false)}
-            className="text-indigo-500 hover:text-indigo-600 hover:underline"
+            className={buttonStyle}
           >
             Pet Projects
           </NavLink>
@@ -74,7 +75,7 @@ function Navbar2() {
           <NavLink
             to="/meal-planner"
             onClick={() => setIsOpen(false)}
-            className="text-indigo-500 hover:text-indigo-600 hover:underline"
+            className={buttonStyle}
           >
             Meal planner
           </NavLink>
@@ -84,4 +85,4 @@ function Navbar2() {
   );
 }
 
-export default Navbar2;
+export default Navbar;
