@@ -1,4 +1,6 @@
-/* eslint-disable no-unused-vars */
+const buttonStyle =
+  "text-lg text-white border-2 border-indigo-500 rounded-lg p-3 hover:bg-slate-800";
+
 function MealActions({ meal, setMeal, setHistory }) {
   function handleSave() {
     setHistory((cur) => [
@@ -17,9 +19,6 @@ function MealActions({ meal, setMeal, setHistory }) {
       salad: "",
     });
   }
-
-  const buttonStyle =
-    "text-xl text-white border-2 border-indigo-500 rounded-lg p-3 hover:bg-slate-800";
 
   return (
     <div className="flex gap-4 justify-center mt-6">

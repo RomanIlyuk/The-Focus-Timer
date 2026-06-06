@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-
 function MealSelector({ meal, setMeal, mains, garnishes, salads }) {
   return (
     <div className="flex flex-col items-center gap-6 pt-10 pb-10">

@@ -9,6 +9,7 @@ import MainLayout from "../layout/MainLayout";
 import MealPlannerHeader from "../components/MealPlanner/MealPlannerHeader";
 import MealSelector from "../components/MealPlanner/MealSelector";
 import MainActions from "../components/MealPlanner/MealActions";
+import MealHistory from "../components/MealPlanner/MealHistory";
 
 function MealPlanner() {
   const [meal, setMeal] = useState({
@@ -30,6 +31,7 @@ function MealPlanner() {
         salads={salads}
       />
       <MainActions meal={meal} setMeal={setMeal} setHistory={setHistory} />
+      <MealHistory history={history} />
     </MainLayout>
   );
 }
