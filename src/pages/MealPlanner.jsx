@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { mains } from "../data/mains";
 import { garnishes } from "../data/garnishes";
@@ -10,6 +10,7 @@ import MealPlannerHeader from "../components/MealPlanner/MealPlannerHeader";
 import MealSelector from "../components/MealPlanner/MealSelector";
 import MainActions from "../components/MealPlanner/MealActions";
 import MealHistory from "../components/MealPlanner/MealHistory";
+import { loadHistory, saveHistory } from "../utils/storage";
 
 function MealPlanner() {
   const [meal, setMeal] = useState({
@@ -18,7 +19,7 @@ function MealPlanner() {
     salad: "",
   });
 
-  const [history, setHistory] = useState([]);
+  const [history, setHistory] = useState(() => loadHistory());
 
   function getRandomIndex(arr) {
     return Math.floor(Math.random() * arr.length);
@@ -31,6 +32,10 @@ function MealPlanner() {
       salad: salads[getRandomIndex(salads)],
     });
   }
+
+  useEffect(() => {
+    saveHistory(history);
+  }, [history]);
 
   return (
     <MainLayout>
