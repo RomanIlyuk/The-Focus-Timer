@@ -3,6 +3,8 @@ const buttonStyle =
 
 function MealActions({ meal, setMeal, setHistory, onRandomMeal }) {
   function handleSave() {
+    if (!meal.main || !meal.garnish || !meal.salad) return;
+
     setHistory((cur) => [
       ...cur,
       {
