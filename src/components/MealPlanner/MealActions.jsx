@@ -1,7 +1,7 @@
 const buttonStyle =
   "text-lg text-white border-2 border-indigo-500 rounded-lg p-3 hover:bg-slate-800";
 
-function MealActions({ meal, setMeal, setHistory }) {
+function MealActions({ meal, setMeal, setHistory, onRandomMeal }) {
   function handleSave() {
     setHistory((cur) => [
       ...cur,
@@ -22,7 +22,9 @@ function MealActions({ meal, setMeal, setHistory }) {
 
   return (
     <div className="flex gap-4 justify-center mt-6">
-      <button className={buttonStyle}>Random meal</button>
+      <button onClick={onRandomMeal} className={buttonStyle}>
+        Random meal
+      </button>
 
       <button onClick={handleSave} className={buttonStyle}>
         Save meal

@@ -20,6 +20,18 @@ function MealPlanner() {
 
   const [history, setHistory] = useState([]);
 
+  function getRandomIndex(arr) {
+    return Math.floor(Math.random() * arr.length);
+  }
+
+  function handleRandomMeal() {
+    setMeal({
+      main: mains[getRandomIndex(mains)],
+      garnish: garnishes[getRandomIndex(garnishes)],
+      salad: salads[getRandomIndex(salads)],
+    });
+  }
+
   return (
     <MainLayout>
       <MealPlannerHeader />
@@ -30,7 +42,12 @@ function MealPlanner() {
         garnishes={garnishes}
         salads={salads}
       />
-      <MainActions meal={meal} setMeal={setMeal} setHistory={setHistory} />
+      <MainActions
+        meal={meal}
+        setMeal={setMeal}
+        setHistory={setHistory}
+        onRandomMeal={handleRandomMeal}
+      />
       <MealHistory history={history} />
     </MainLayout>
   );
