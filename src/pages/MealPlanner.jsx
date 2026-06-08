@@ -13,13 +13,14 @@ import MealHistory from "../components/MealPlanner/MealHistory";
 import { loadHistory, saveHistory } from "../utils/storage";
 
 function MealPlanner() {
+  // STATE
+  const [history, setHistory] = useState(() => loadHistory());
+
   const [meal, setMeal] = useState({
     main: "",
     garnish: "",
     salad: "",
   });
-
-  const [history, setHistory] = useState(() => loadHistory());
 
   function getRandomIndex(arr) {
     return Math.floor(Math.random() * arr.length);
@@ -31,6 +32,10 @@ function MealPlanner() {
       garnish: garnishes[getRandomIndex(garnishes)],
       salad: salads[getRandomIndex(salads)],
     });
+  }
+
+  function handleClearHistory() {
+    setHistory([]);
   }
 
   useEffect(() => {
@@ -53,7 +58,7 @@ function MealPlanner() {
         setHistory={setHistory}
         onRandomMeal={handleRandomMeal}
       />
-      <MealHistory history={history} />
+      <MealHistory history={history} onClearHistory={handleClearHistory} />
     </MainLayout>
   );
 }

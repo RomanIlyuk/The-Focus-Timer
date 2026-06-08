@@ -1,6 +1,6 @@
 const spanClasses = "font-semibold text-indigo-400";
 
-function MealHistory({ history }) {
+function MealHistory({ history, onClearHistory }) {
   return (
     <section className="mt-12 flex flex-col items-center">
       <h2 className="mb-6 text-2xl font-bold text-indigo-500">Meal History</h2>
@@ -32,6 +32,13 @@ function MealHistory({ history }) {
           </div>
         ))}
       </div>
+
+      <button
+        onClick={onClearHistory}
+        className="text-lg text-white border-2 border-indigo-500 rounded-lg p-3 hover:bg-slate-800 mt-10"
+      >
+        Clear All
+      </button>
     </section>
   );
 }
