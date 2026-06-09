@@ -4,10 +4,14 @@ const buttonStyle =
 const disabledButtonStyle =
   "text-lg text-white border-2 border-gray-600 rounded-lg p-3 bg-gray-800 opacity-50 cursor-not-allowed";
 
-function MealActions({ meal, setMeal, setHistory, onRandomMeal, isDuplicate }) {
+function MealActions({
+  meal,
+  setMeal,
+  setHistory,
+  onRandomMeal,
+  isSaveDisabled,
+}) {
   function handleSave() {
-    if (!meal.main || !meal.garnish || !meal.salad) return;
-
     setHistory((cur) => [
       ...cur,
       {
@@ -33,8 +37,8 @@ function MealActions({ meal, setMeal, setHistory, onRandomMeal, isDuplicate }) {
 
       <button
         onClick={handleSave}
-        className={isDuplicate ? disabledButtonStyle : buttonStyle}
-        disabled={isDuplicate}
+        className={isSaveDisabled ? disabledButtonStyle : buttonStyle}
+        disabled={isSaveDisabled}
       >
         Save meal
       </button>

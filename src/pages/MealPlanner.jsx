@@ -22,12 +22,15 @@ function MealPlanner() {
     salad: "",
   });
 
+  const isMealComplete = !meal.main || !meal.garnish || !meal.salad;
   const isDuplicate = history.some(
     (item) =>
       item.main === meal.main &&
       item.garnish === meal.garnish &&
       item.salad === meal.salad,
   );
+
+  const isSaveDisabled = isDuplicate || isMealComplete;
 
   function getRandomIndex(arr) {
     return Math.floor(Math.random() * arr.length);
@@ -64,7 +67,7 @@ function MealPlanner() {
         setMeal={setMeal}
         setHistory={setHistory}
         onRandomMeal={handleRandomMeal}
-        isDuplicate={isDuplicate}
+       isSaveDisabled={isSaveDisabled}
       />
       <MealHistory history={history} onClearHistory={handleClearHistory} />
     </MainLayout>
