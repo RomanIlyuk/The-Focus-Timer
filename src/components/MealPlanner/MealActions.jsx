@@ -1,7 +1,7 @@
 const buttonStyle =
   "text-lg text-white border-2 border-indigo-500 rounded-lg p-3 hover:bg-slate-800";
 
-function MealActions({ meal, setMeal, setHistory, onRandomMeal }) {
+function MealActions({ meal, setMeal, setHistory, onRandomMeal, isDuplicate }) {
   function handleSave() {
     if (!meal.main || !meal.garnish || !meal.salad) return;
 
@@ -28,7 +28,11 @@ function MealActions({ meal, setMeal, setHistory, onRandomMeal }) {
         Random meal
       </button>
 
-      <button onClick={handleSave} className={buttonStyle}>
+      <button
+        onClick={handleSave}
+        className={buttonStyle}
+        disabled={isDuplicate}
+      >
         Save meal
       </button>
 
