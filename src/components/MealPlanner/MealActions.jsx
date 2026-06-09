@@ -1,6 +1,9 @@
 const buttonStyle =
   "text-lg text-white border-2 border-indigo-500 rounded-lg p-3 hover:bg-slate-800";
 
+const disabledButtonStyle =
+  "text-lg text-white border-2 border-gray-600 rounded-lg p-3 bg-gray-800 opacity-50 cursor-not-allowed";
+
 function MealActions({ meal, setMeal, setHistory, onRandomMeal, isDuplicate }) {
   function handleSave() {
     if (!meal.main || !meal.garnish || !meal.salad) return;
@@ -30,7 +33,7 @@ function MealActions({ meal, setMeal, setHistory, onRandomMeal, isDuplicate }) {
 
       <button
         onClick={handleSave}
-        className={buttonStyle}
+        className={isDuplicate ? disabledButtonStyle : buttonStyle}
         disabled={isDuplicate}
       >
         Save meal

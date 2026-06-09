@@ -35,7 +35,7 @@ function MealHistory({ history, onClearHistory }) {
 
       <button
         onClick={onClearHistory}
-        className="text-lg text-white border-2 border-indigo-500 rounded-lg p-3 hover:bg-slate-800 mt-10"
+        className="text-lg text-white border-2 border-indigo-500 rounded-lg p-3 hover:bg-slate-800 mt-10 mb-20"
       >
         Clear All
       </button>
