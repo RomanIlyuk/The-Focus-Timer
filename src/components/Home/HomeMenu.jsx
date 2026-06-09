@@ -27,6 +27,12 @@ function HomeMenu({ isOpen }) {
             Research your projects
           </Link>
         </li>
+
+        <li className="transition-all duration-300 hover:scale-105">
+          <Link className={buttonStyles} to="/meal-planner">
+            Design your plate
+          </Link>
+        </li>
       </ul>
     </div>
   );
